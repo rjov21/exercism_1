@@ -75,3 +75,20 @@ def score(word=""):
         if i == "Q" or i == "Z":
             scorefinal = scorefinal + 10
     return scorefinal
+
+
+# acronym
+def abbreviate(words):
+    a = ""
+    z = 0
+    a = a + words[0]
+    for i in words:
+        if i == " " or i == "-" or i == "_":
+            r = words[z + 1]
+            if r == "-" or r == "_" or r == " ":
+                s = words[z + 2]
+                a = a + s
+            else:
+                a = a + r
+        z += 1
+    return a.upper()
