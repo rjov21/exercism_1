@@ -123,3 +123,13 @@ def is_armstrong_number(number):
     if suma == number:
         respuesta = True
     return respuesta
+
+
+# sum of multipes
+def sum_of_multiples(limit, multiples):
+    suma = 0
+    for j in multiples:
+        for i in range(1, limit+1):
+            if i % j == 0:
+                suma = suma + i
+    return suma
