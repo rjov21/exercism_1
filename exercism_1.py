@@ -108,3 +108,20 @@ def response(hey_bob):
     else:
         answer = "Whatever."
     return answer
+
+
+# amstrong numbers
+
+
+def is_armstrong_number(number):
+    respuesta = False
+    number1 = str(number)
+    x = len(number1)
+    suma = 0
+    for i in number1:
+        q = int(i)
+        w = q ** x
+        suma = suma + w
+    if suma == number:
+        respuesta = True
+    return respuesta
